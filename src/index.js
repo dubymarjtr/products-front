@@ -14,3 +14,12 @@ api.index().then((products) => {
   ${List(products)}
 </main>
 `;
+
+  document.querySelector("#search").addEventListener("keyup", (e) => {
+    console.log(
+      products.filter((product) =>
+        product.name.toLowerCase().includes(e.target.value.toLowerCase())
+      )
+    );
+  });
+});
