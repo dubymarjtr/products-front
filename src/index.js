@@ -7,4 +7,10 @@ api.index().then((data) => {
 });
 const root = document.querySelector("#root");
 
-root.innerHTML = `<p class=text-center>Hello World</p>`;
+api.index().then((products) => {
+  root.innerHTML = `
+<main class="container mx-auto flex flex-col items-center">
+  ${Form}
+  ${List(products)}
+</main>
+`;
