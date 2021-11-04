@@ -11,5 +11,6 @@ module.exports = {
   rules: {
     "capitalized-comments": "off",
     "no-unused-vars": 1,
+    "new-cap": 0,
   },
 };
